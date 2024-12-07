@@ -1,0 +1,265 @@
+<style type="text/css">
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .page-break {
+        page-break-before: always;
+    }
+    table {
+      width: 98%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    th,
+    td {
+      padding: 3px 8px;
+      text-align: center;
+    }
+    tr > .headers{
+      border: 2px solid black;
+    }
+    .two_lines{
+      border: 1px solid black;
+      padding: 1px;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    .center {
+      text-align: center;
+    }
+    .border_left{
+      border-left: 2px solid black;
+    }
+    .border_right{
+      border-right: 2px solid black;
+    }
+    .border_top{
+      border-top: 2px solid black;
+    }
+    .border_bottom{
+      border-bottom: 2px solid black;
+    }
+    .header-logo {
+      text-align: center;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    .invoice-header {
+      text-align: center;
+      font-weight: bold;
+      background-color: rgba(249, 55, 55, 0.323);
+      font-size: 22px;
+      padding: 0px;
+      color: red;
+    }
+    .highlight {
+      background-color: yellow;
+    }
+    .section-title {
+      font-weight: bold;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+</style>
+
+<table>
+    <thead>
+    <!-- Logo Row -->
+    <tr>
+        <td colspan="11" class="header-logo headers">
+        <img src="data:image/jpg;base64,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" alt="Logo" height="60" />
+        </td>
+    </tr>
+
+    <!-- Invoice Title -->
+    <tr>
+        <td colspan="10" class="invoice-header headers">INVOICE</td>
+        <td class="headers" colspan="1">PAGE 1/2</td>
+    </tr>
+
+    <!-- Basic Details -->
+    <tr>
+        <td colspan="6" class="section-title headers" style="text-align: left;">CONSIGNER-:</td>
+        <td class="headers">Invoice No</td=>
+        <td class="headers">141/24-25</td>
+        <td class="headers"></td>
+        <td class="headers">PI NO</td>
+        <td class="headers">R 266</td>
+    </tr>
+    </thead>
+
+    <tbody>
+    <!-- Consigner Details -->
+    <tr>
+        <td colspan="6" class="border_left" style="text-align: left;">PHP ITALIAN HOME COLLECTION PVT LTD</td>
+        <td class="headers">Dtd. :-</td>
+        <td class="headers">27.08.2024</td>
+        <td class="headers"></td>
+        <td class="headers">PI DATE</td>
+        <td class="headers">25.08.2024</td>
+    </tr>
+    <tr>
+        <td colspan="6" class="border_left" style="text-align: left;">GSTN: 06AANCP5143R1ZP</td>
+        <td class="headers">PAYMENT MODE</td>
+        <td colspan="2" class="highlight headers">30 DAYS CREDIT</td>
+        <td colspan="2" class="headers"></td>
+    </tr>
+    <tr>
+        <td colspan="6" class="border_left" style="text-align: left;">Panipat - 132103 (HARYANA), INDIA </td>
+        <td class="headers">MOBILE</td>
+        <td class="headers" colspan="4">
+                
+        </td>
+    </tr>
+    <tr>
+        <td colspan="6" class="border_left" style="text-align: left;">GSTN: 06AANCP5143R1ZP</td>
+        <td class="headers" colspan="5">Buyer's P.O # & Date: BY PHONE</td>
+    </tr>
+    <tr>
+        <td colspan="6" class="border_left" style="text-align: left;">MOBILE: 98969 09992</td>
+        <td class="headers" colspan="5">‎</td>
+    </tr>
+
+    <!-- Consignee Details -->
+    <tr>
+        <td colspan="6" class="section-title headers" style="text-align: left;">CONSIGNEE-:</td>
+        <td rowspan="4" class="section-title headers">Delivery Address:</td>
+        <td rowspan="4" class="headers" colspan="4">‎</td>
+    </tr>
+
+    <!-- EWAY Bill and Vehicle -->
+    <tr>
+        <td colspan="6" class="border_left" style="text-align: left;">VRUNDAVAN HOME DECOR</td>
+    </tr>
+
+    <tr>
+      <td colspan="6" class="border_left" style="text-align: left;">GSTN: 24AATFV7667B1ZP</td>
+    </tr>
+
+    
+    <tr>
+      <td colspan="6" class="border_left" style="text-align: left;">ARODRAPE HOUSE, SWASTIK SOCIETY B/H</td>
+    </tr>
+
+    
+    <tr>
+      <td colspan="6" class="border_left" style="text-align: left;">MIRCH MASALA RESTAURANT OF CG ROAD</td>
+      <td class="headers">EWAY BILL:</td>
+      <td class="headers" colspan="2">3118 3466 0916</td>
+      <td class="headers" colspan="2"></td>
+    </tr>
+
+    
+    <tr>
+      <td colspan="6" class="border_left" style="text-align: left;">AHMEDABAD-380009</td>
+      <td class="headers">VEHICLE NUMBER:</td>
+      <td class="headers" colspan="2">SAFEXPRESS</td>
+      <td class="headers" colspan="2">88AAECS4363H1ZA</td>
+    </tr>
+    </tbody>
+
+
+    {{!-- Dynamic CONTENT HEADER DETAILS --}}
+    <thead>
+    <tr>
+        <th class="center headers" colspan="8">FLOORMATS</th>
+        <th class="center headers">Quantity<br />In Pcs.</th>
+        <th class="center headers">PRICE // PCS</th>
+        <th class="center headers">TOTAL<br />Amount</th>
+    </tr>
+    <tr>
+        <th class="center border_left border_bottom">STYLE</th>
+        <th class="center border_bottom" colspan="2">SIZE</th>
+        <th class="center border_bottom" colspan="3">COLOR</th>
+        <th class="center border_bottom">COLOR (INDIAN NAME)</th>
+        <th class="center border_right border_bottom">HS CODE</th>
+        <th class="headers"></th>
+        <th class="headers"></th>
+        <th class="headers"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+      {{#each items}}
+        {{#each this}}
+            <tr>
+                <td class="center border_left">{{combination_id}}</td>
+                <td class="center" colspan="2">{{size_value}}</td>
+                <td colspan="3" class="center">{{color_name}}</td>
+                <td class="center">{{color_pair}}</td>
+                <td class="center border_right">{{invoice_fid}}</td>
+                <td class="center border_right">{{qty}}</td>
+                <td class="center border_right">₹{{price}}</td>
+                <td class="center border_right">₹{{price}}</td>
+            </tr>
+        {{/each}}
+        <!-- Add border after each array -->
+        <tr>
+            <td colspan="11" class="two_lines"></td>
+        </tr>
+      {{/each}}
+
+      </tbody>
+
+    <!-- AGAIN STATIC CONTENT FOR THE FOOTER AREA -->
+    <tbody>
+      <tr>
+        <td class="headers">Total Cartoons</td>
+        <td class="highlight headers" style="font-size: 14px;">5 Box</td>
+        <td colspan="5" class="headers"></td>
+        <td class="headers">TOTAL</td>
+        <td class="headers">101</td>
+        <td class="headers"></td>
+        <td class="headers">2523523</td>
+      </tr>
+
+      <tr>
+        <td class="headers" colspan="7">TOTAL -: Rps. SEVENTY THREE THOUSAND FIVE HUNDRED FIFTY TWO Only</td>
+        <td class="headers">IGST</td>
+        <td class="headers">12%</td>
+        <td class="headers"></td>
+        <td class="headers">2523523</td>
+      </tr>
+
+      <tr>
+        <td class="headers" colspan="7">No Cash Payment will be Accepted. Please Make all Payment by RTGS</td>
+        <td class="headers" colspan="3">GRAND TOTAL</td>
+        <td class="highlight headers">2523523</td>
+      </tr>
+
+      <tr>
+        <td colspan="7" class="border_left border_right" style="text-align: left;">Banking Information :-</td>
+        <td colspan="3" class="border_left">For :-</td>
+        <td class="border_right">PAGE 2/2</td>
+      </tr>
+
+      <tr>
+        <td colspan="7" class="border_left border_right" style="text-align: left;">PHP ITALIAN HOME COLLECTION PVT LTD</td>
+        <td colspan="4" class="border_left border_right">PHP ITALIAN HOME COLLECTION PVT LTD</td>
+      </tr>
+
+      <tr>
+        <td colspan="7" class="border_left border_right" style="text-align: left;">CURRENT Account No -: 41593639716</td>
+        <td colspan="4" class="border_left border_right"></td>
+      </tr>
+
+      <tr>
+        <td colspan="7" class="border_left border_right" style="text-align: left;">IFSC Code : SBIN0004050</td>
+        <td colspan="4" class="border_left border_right">ABHISHEK DHAWAN</td>
+      </tr>
+
+      <tr>
+        <td colspan="7" class="border_left border_right" style="text-align: left;">With State Bank Of India, S.C.B, G.T. Road Panipat-132103 (INDIA)</td>
+        <td colspan="4" class="border_left border_right">DIRECTOR</td>
+      </tr>
+
+      <tr>
+        <td colspan="11" class="headers" style="background-color: rgba(44, 44, 254, 0.392); text-align: center;">IF YOU HAVE RECEIVED ANY CARTON WITH TAPE SEAL BROKEN, PLEASE INFORM US AT EARLIEST</td>
+      </tr>
+    </tbody>
+
+</table>
